@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>DJI_0667_R_JPG_jpg.rf.eeede5276fbb9d2c18c241e90a8d3fa4.jpg</filename>
+	<path>DJI_0667_R_JPG_jpg.rf.eeede5276fbb9d2c18c241e90a8d3fa4.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>thermal_defect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>420</xmin>
+			<xmax>633</xmax>
+			<ymin>90</ymin>
+			<ymax>214</ymax>
+		</bndbox>
+	</object>
+</annotation>

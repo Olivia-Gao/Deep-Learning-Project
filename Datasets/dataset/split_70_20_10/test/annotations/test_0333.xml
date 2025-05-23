@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>Test_Solar_Image_025_JPG_jpg.rf.513c08afea400841e47972ce32df696f.jpg</filename>
+	<path>Test_Solar_Image_025_JPG_jpg.rf.513c08afea400841e47972ce32df696f.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>thermal_defect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>426</xmin>
+			<xmax>492</xmax>
+			<ymin>356</ymin>
+			<ymax>470</ymax>
+		</bndbox>
+	</object>
+</annotation>

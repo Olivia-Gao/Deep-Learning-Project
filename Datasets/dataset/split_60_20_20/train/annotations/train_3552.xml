@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>img-101-_JPG_jpg.rf.c3f72d51332441425146dc14dd7047e5.jpg</filename>
+	<path>img-101-_JPG_jpg.rf.c3f72d51332441425146dc14dd7047e5.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>thermal_defect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>593</xmin>
+			<xmax>627</xmax>
+			<ymin>14</ymin>
+			<ymax>84</ymax>
+		</bndbox>
+	</object>
+</annotation>

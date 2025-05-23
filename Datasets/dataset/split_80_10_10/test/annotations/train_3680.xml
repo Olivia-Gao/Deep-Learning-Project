@@ -1,0 +1,14 @@
+<annotation>
+	<folder></folder>
+	<filename>thermal38_jpg.rf.6df4219491946691d577b7646a41cb43.jpg</filename>
+	<path>thermal38_jpg.rf.6df4219491946691d577b7646a41cb43.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>ECOGYGEORGETOWN2_444_jpg.rf.4e3516a53c5a146295ef5f1f23920456.jpg</filename>
+	<path>ECOGYGEORGETOWN2_444_jpg.rf.4e3516a53c5a146295ef5f1f23920456.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>thermal_defect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>211</xmin>
+			<xmax>247</xmax>
+			<ymin>390</ymin>
+			<ymax>459</ymax>
+		</bndbox>
+	</object>
+</annotation>

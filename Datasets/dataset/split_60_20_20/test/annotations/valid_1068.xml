@@ -1,0 +1,14 @@
+<annotation>
+	<folder></folder>
+	<filename>thermal_compose__12-11-31-499793_3thermal_18-PNG_png_jpg.rf.b36cf812db73b7bd27471c021f142b9e.jpg</filename>
+	<path>thermal_compose__12-11-31-499793_3thermal_18-PNG_png_jpg.rf.b36cf812db73b7bd27471c021f142b9e.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

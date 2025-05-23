@@ -1,0 +1,14 @@
+<annotation>
+	<folder></folder>
+	<filename>DJI_0309_R_JPG_jpg.rf.f49b7107685bfdab2fffce8f3bce39ad.jpg</filename>
+	<path>DJI_0309_R_JPG_jpg.rf.f49b7107685bfdab2fffce8f3bce39ad.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

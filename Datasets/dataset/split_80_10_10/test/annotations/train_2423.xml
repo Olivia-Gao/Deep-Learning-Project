@@ -1,0 +1,14 @@
+<annotation>
+	<folder></folder>
+	<filename>Test_Solar_Image_098_JPG_jpg.rf.fb6a00c1a4f83f912130e6044eb5d0c5.jpg</filename>
+	<path>Test_Solar_Image_098_JPG_jpg.rf.fb6a00c1a4f83f912130e6044eb5d0c5.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

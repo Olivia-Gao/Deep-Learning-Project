@@ -1,0 +1,14 @@
+<annotation>
+	<folder></folder>
+	<filename>INDASPEC_MAPLEDAIRY_0463_2_jpg.rf.e74795d50901ca7f16afe8552e898d5d.jpg</filename>
+	<path>INDASPEC_MAPLEDAIRY_0463_2_jpg.rf.e74795d50901ca7f16afe8552e898d5d.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>

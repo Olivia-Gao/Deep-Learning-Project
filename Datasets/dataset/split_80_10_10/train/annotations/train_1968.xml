@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>EGATCISLAND7_MEDIA101_0609_R_JPG_jpg.rf.252393a559cd6bb03daf305bdc484e14.jpg</filename>
+	<path>EGATCISLAND7_MEDIA101_0609_R_JPG_jpg.rf.252393a559cd6bb03daf305bdc484e14.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>thermal_defect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>386</xmin>
+			<xmax>500</xmax>
+			<ymin>185</ymin>
+			<ymax>250</ymax>
+		</bndbox>
+	</object>
+</annotation>

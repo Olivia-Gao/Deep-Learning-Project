@@ -1,0 +1,27 @@
+<annotation>
+	<folder></folder>
+	<filename>BAKERELECTRICBLOCK10-17_101MEDIA_0706_1_JPG_jpg.rf.9870f49d1d25ce9c0b63af181eb8f2a3.jpg</filename>
+	<path>BAKERELECTRICBLOCK10-17_101MEDIA_0706_1_JPG_jpg.rf.9870f49d1d25ce9c0b63af181eb8f2a3.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>thermal_defect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<occluded>0</occluded>
+		<bndbox>
+			<xmin>275</xmin>
+			<xmax>335</xmax>
+			<ymin>518</ymin>
+			<ymax>559</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,14 @@
+<annotation>
+	<folder></folder>
+	<filename>Thermal_Solar_765_jpg.rf.4401cdb5708cea442eb4cc32365e882a.jpg</filename>
+	<path>Thermal_Solar_765_jpg.rf.4401cdb5708cea442eb4cc32365e882a.jpg</path>
+	<source>
+		<database>roboflow.com</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>640</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+</annotation>
