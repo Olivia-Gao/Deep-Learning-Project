@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solar Cell Defect Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Solar Cell Defect Detection, Image Upload, Deep Learning" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstrap-css -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--// bootstrap-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="../static/css/style.css" type="text/css" media="all" />
+    <!--// css -->
+    <!-- font-awesome icons -->
+    <link href="../static/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <script src="../static/js/jquery-1.11.1.min.js"></script>
+    <script src="../static/js/bootstrap.js"></script>
+    <style>
+        .gallery {
+            display: flex;
+            justify-content: center;
+        }
+        .box {
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 10px 20px 15px 5px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 425px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .data-box {
+            height: 384px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        .controls {
+            background-color: #fff;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+        }
+        button {
+            border: none;
+            padding: 10px 30px;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            opacity: 0.9;
+            background-color: #005bc0;
+        }
+        .metrics {
+            background-color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+        .custom-file-label {
+            display: block;
+            padding: 10px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .custom-file-label:hover {
+            opacity: 0.9;
+            background-color: #419445;
+        }
+        .custom-file-label, #predictButton {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        /* Image result display */
+        .image-result {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .image-result h4 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .image-result .images-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .image-result img {
+            height: auto;
+            border-radius: 10px;
+        }
+        #imageResultSection {
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <!-- banner -->
+    <div class="banner about-bg">
+        <div class="top-banner about-top-banner">
+            <div class="container">
+                <div class="top-banner-left">
+                    <ul>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> +15892683456</li>
+                        <li><a href="mailto:gao.rui@student.zy.cdut.edu.cn"><i class="fa fa-envelope" aria-hidden="true"></i> gao.rui@student.zy.cdut.edu.cn</a></li>
+                    </ul>
+                </div>
+                <div class="top-banner-right">
+                    <ul>
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a class="facebook" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>
+                        <a href="index.html">Solar Cell Defect Detector</a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+
+    <div class="a-grid">
+        <div class="container">
+            <div class="w3l-about-heading">
+                <h2>Solar Cell Defect Detection</h2>
+                <p>Upload an image to detect defects in solar cells using our deep learning model.</p>
+            </div>
+            <div class="gallery">
+                <div class="box">
+                    <div class="data-box" id="dataBox">
+                        <p>Upload Image</p>
+                    </div>
+                    <div class="controls">
+                        <form id="uploadForm" enctype="multipart/form-data">
+                            <input type="file" id="imageFile" name="file" accept="image/*" style="display: none;">
+                            <label for="imageFile" class="custom-file-label">Choose Image File</label>
+                            <button type="button" id="predictButton">Detect Defects</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image result section -->
+            <div class="image-result" id="imageResultSection">
+                <h4>Prediction: <span id="predictionResult">N/A</span></h4>
+                <div class="images-container">
+                    <div>
+                        <p><strong>Original Image</strong></p>
+                        <img id="originalImage" src="" alt="Original Image">
+                    </div>
+                    <div>
+                        <p><strong>Heatmap</strong></p>
+                        <img id="heatmapImage" src="" alt="Heatmap">
+                    </div>
+                    <div>
+                        <p><strong>Overlay</strong></p>
+                        <img id="overlayImage" src="" alt="Overlay">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('imageFile').addEventListener('change', function(e) {
+            if (this.files.length > 0) {
+                document.getElementById('dataBox').innerHTML =
+                    `File selected: <strong>${this.files[0].name}</strong>`;
+            }
+        });
+
+        document.getElementById('predictButton').addEventListener('click', function() {
+            const fileInput = document.getElementById('imageFile');
+            if (!fileInput.files.length) {
+                alert("Please choose an image file first!");
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+
+            // Show loading status
+            document.getElementById('dataBox').innerHTML =
+                `<img src="../static/images/loading2.gif" alt="Loading..." style="width:50px;height:50px;"><br>Predicting...`;
+
+            // Hide image result section (if previously displayed)
+            document.getElementById('imageResultSection').style.display = 'none';
+
+            fetch('/functions/predict', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+
+                const predictionResult = document.getElementById('predictionResult');
+                const originalImage = document.getElementById('originalImage');
+                const heatmapImage = document.getElementById('heatmapImage');
+                const overlayImage = document.getElementById('overlayImage');
+
+                if (data.status === 'success') {
+                    // Update result and display images
+                    predictionResult.textContent = data.prediction;
+                    originalImage.src = `data:image/jpeg;base64,${data.original}`;
+                    heatmapImage.src = `data:image/jpeg;base64,${data.heatmap}`;
+                    overlayImage.src = `data:image/jpeg;base64,${data.overlay}`;
+
+                    // Show result section
+                    document.getElementById('imageResultSection').style.display = 'flex';
+                    document.getElementById('dataBox').innerHTML = `Prediction Successful!`;
+                } else {
+                    document.getElementById('dataBox').innerHTML = "Prediction failed. Please try again.";
+                }
+            })
+            .catch(error => {
+                document.getElementById('dataBox').innerHTML = "An error occurred. Please try again.";
+                console.error('Error:', error);
+            });
+        });
+    </script>
+
+</body>
+</html>
